@@ -1,26 +1,27 @@
+const users = [
+    "ESL_SC2",
+    "OgamingSC2",
+    "cretetion",
+    "freecodecamp",
+    "storbeck",
+    "habathcx",
+    "RobotCaleb",
+    "noobs2ninjas"
+];
 
 
-
-function connect(user_id) {
-
-    var obj = {  
-        method: 'GET',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json',
-          'Authorization': 'liqzudbczngq42yrrf4jzrlu28tc3w'
-        }
-        
-    }
-
-    fetch('https://api.twitch.tv/helix/users?login='+user_id, obj)
+function connect() {
+    fetch("https://wind-bow.glitch.me/twitch-api/streams/OgamingSC2")
         .then(function (response) {
             return response.json();
         })
         .then(function (myJson) {
-            console.log(myJson);
+            return (myJson);
         });
 
 }
 
-connect('freecodecamp')
+
+
+
+connect()
